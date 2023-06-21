@@ -50,6 +50,7 @@ export default function StartButton(  ) {
           setErrors('Mauvais identifiants')
       } else{
         setErrors('Aucun champs vide ')
+        console.log(data)
       }
       }  else{
       //  console.log(data.user.typeofuser);

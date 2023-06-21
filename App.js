@@ -21,6 +21,8 @@ import Monregistremedical from './Components/Monregistremedical'
 import Resultatduneanalyse from './Components/Resultatduneanalyse'
 import Paiement from './Components/Paiement';
 import Delete from './Components/Delete';
+import Menuinfirmier from './Components/Menuinfirmiere';
+import Constantes from './Components/Constantes';
 
 
 const Stack = createNativeStackNavigator();
@@ -196,10 +198,42 @@ export default function App() {
                 }
             }
            />
-
+           <Stack.Screen
+              name="Constantes d'une consultation"
+              component={Constantes}
+              options={
+                {
+                  headerStyle: {
+                    backgroundColor:'rgba(255, 116, 105, 0.75)',
+                    elevation: 0,
+                    shadowOpacity: 0,
+                    borderBottomWidth: 0,
+                  },
+                  headerShadowVisible: false, // applied here
+                  headerShown:true,
+                }
+            }
+           />
             <Stack.Screen
               name='Menu'
               component={Menu}
+              options={
+                {
+                  headerStyle: {
+                    backgroundColor:'rgba(255, 116, 105, 0.75)',
+                    elevation: 0,
+                    shadowOpacity: 0,
+                    borderBottomWidth: 0,
+                  },
+                  headerShadowVisible: false, // applied here
+                  headerShown:true,
+                }
+              }
+           />
+
+            <Stack.Screen
+              name='Menu infirmier'
+              component={Menuinfirmier}
               options={
                 {
                   headerStyle: {
@@ -336,16 +370,37 @@ export default function App() {
             })}
           />
 
-            <Stack.Screen
+
+           <Stack.Screen
               name='Infirmier'
               component={Infirmierpage}
-              options={
-              {
-              headerShown:false,
-              presentation:'',
-              }
-            }
+              options={({ navigation, route }) => ({
+
+                headerStyle: {
+                          backgroundColor:'rgba(255, 116, 105, 0.75)',
+                          elevation: 0,
+                          shadowOpacity: 0,
+                          borderBottomWidth: 0,
+               },
+               headerShadowVisible: false, // applied here
+               headerShown:true,
+             
+                  headerRight: () => (
+                    <TouchableOpacity style={styles.seemore} 
+                          onPress={ ()=> {
+                            navigation.navigate('Menu infirmier' , {
+                              docEmail:route.params.userCredential.email,
+                            docName:route.params.userCredential.name,
+                          }); 
+                         // console.log(route.params.userCredential.email)
+                        }}
+                     >  
+                       <Entypo name="menu" size={43} color="black" />
+                  </TouchableOpacity>
+                ),
+            })}
           />
+
 
 
 

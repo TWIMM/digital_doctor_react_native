@@ -17,11 +17,7 @@ export default function Menu({ route, navigation }) {
 
     <View style={styles.container}>
      
-      <TouchableOpacity style={styles.menu}>
-        <Text style={{ color:'black', fontSize:17,fontWeight:'bold'}}>  
-            Programmation des gardes 
-        </Text>
-       </TouchableOpacity>
+     
 
        <TouchableOpacity  style={styles.menu}
          onPress={()=>{
@@ -48,7 +44,7 @@ export default function Menu({ route, navigation }) {
            }}
        >
         <Text  style={{ color:'black', fontSize:17,fontWeight:'bold'}}>  
-           Enregistrer des soins 
+           Enregistrer des soins
         </Text>
        </TouchableOpacity>
 

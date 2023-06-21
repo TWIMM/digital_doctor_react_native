@@ -5,6 +5,7 @@ import { Entypo } from '@expo/vector-icons';
 import Spinner from './Spinner';
 import Patientrdvconfirmed from './Patientrdvconfirmed';
 import { globalConst } from './GlobalConst';
+import handleEmpty from './handleEmpty';
 
 const width =  Dimensions.get('window').width;
 const height =  Dimensions.get('window').height;
@@ -187,6 +188,7 @@ export default function Patitentpage({route, navigation}) {
                     keyExtractor={item => item.id}
                     horizontal={true}
                     decelerationRate={0} 
+                    ListEmptyComponent={handleEmpty}
                     bounces={false}
                     renderItem={({item , index}) => 
                     {  

@@ -85,7 +85,7 @@ export default function Getsoins() {
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
                     data={DATA}
-                    renderItem={({item}) => <Getsoinsmodel getsoinsmodel={item} />}
+                    renderItem={({item}) => <Getsoinsmodel key={item.id} getsoinsmodel={item} />}
                     keyExtractor={item => item.id}
                     key={item => item.id}
                     ListEmptyComponent={handleEmpty}

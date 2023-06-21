@@ -17,7 +17,7 @@ export default function Consultations({consultations}) {
       </View>
 
       <View style={{ flexDirection:'row', display:'flex', justifyContent:'center', alignItems:'center'}} >
-         <Text  style={styles.title} >  {'->'} Numero de ticket de la consultation :</Text>
+         <Text  style={styles.title} >  {'->'} Id consultation :</Text>
          <Text selectable> {consultations.id_consultation}</Text>
       </View>
 
@@ -81,9 +81,9 @@ const styles = StyleSheet.create({
       alignItems:'center',
       borderRadius:width*0.02,
       padding:10,
+      height:width*0.6,
       backgroundColor: 'rgba(255, 116, 105, 0.7)',
       width:width*0.95,
-      height:height*0.2,
       marginVertical: 5,
       marginHorizontal: 10,
     },

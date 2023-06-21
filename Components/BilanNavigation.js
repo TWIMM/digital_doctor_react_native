@@ -212,7 +212,7 @@ export default function BilanNavigation({route , navigation}) {
                 <TextInput keyboardType='email-address' onChangeText={handleEmailPatient} placeholder="Email du patient" style={Styles.textinputone}/>
                 <TextInput onChangeText={handleSymptome} placeholder="Symptomes décrit par le patient" multiline={true} style={Styles.textinputtwo}/>
                 <TextInput onChangeText={handleObservation} placeholder="Observation générale" multiline={true} style={Styles.textinputtwo}/>
-                <TextInput onChangeText={handleVaccin} placeholder="Statut vaccinal" multiline={true} style={Styles.textinputtwo}/>
+        
                 <TextInput onChangeText={handleAnalyse} placeholder="Analyse complémentaires" multiline={true} style={Styles.textinputtwo}/>
                 <TextInput onChangeText={handleDiagnostique} placeholder="Classification de la maladie repérée et diagnostique" multiline={true} style={Styles.textinputtwo}/>
 

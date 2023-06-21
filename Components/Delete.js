@@ -65,7 +65,7 @@ export default function Delete() {
                
                     data={DATA}
                     horizontal={false}
-                    renderItem={({item}) => <Myusers users={item} getUsersAgain={getUsers} />}
+                    renderItem={({item}) => <Myusers key={item.id} users={item} getUsersAgain={getUsers} />}
                     keyExtractor={item => item.id_consultation}
                     key={item => item.id_consultation}
                     ListEmptyComponent={handleEmpty}

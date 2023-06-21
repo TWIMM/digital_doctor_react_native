@@ -60,8 +60,8 @@ export default function Mysusers({users , getUsersAgain}) {
       </View>
 
 
-      <TouchableOpacity onPress={deleteUser} style={{backgroundColor:'red',borderRadius:width*0.02, flexDirection:'row', display:'flex', justifyContent:'center', alignItems:'center' , marginVertical:width*0.15}} >
-      <Text > Supprimer </Text>
+      <TouchableOpacity onPress={deleteUser} style={{backgroundColor:'red',borderRadius:width*0.02, height:width*0.1,flexDirection:'row', display:'flex', justifyContent:'center', alignItems:'center' , marginVertical:width*0.05}} >
+       <Text > Supprimer </Text>
        <AntDesign name="delete" size={24} color="black" />
       </TouchableOpacity>
 
